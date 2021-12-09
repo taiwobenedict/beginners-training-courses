@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* General Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2 {
+    margin: 20px 0px;
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.6rem;
+}
+
+/* Landing Page */
+
+#main-header {
+    background: url(/images/home/showcase.jpg) no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+/* Image Overlay */
+#main-header::before {
+    content: '';
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+}
+
+#main-header  *{
+    z-index: 1;
+}
+
+/* Main Navigation */
+
+#main-nav {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    opacity: 0.8;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 25px;
+
+}
+.sub-nav {
+    flex-direction: row;
+}
+
+.sub-nav a {
+    padding: 5px 20px;
+}
+
+.sub-nav a:hover {
+    border-bottom: solid 2px #28a745;
+}
+
+/* Welcome Section */
+
+#wlc {
+    height: 100%;
+    color: white;
+}
+
+#wlc .content {
+    height: 100%;
+}
+
+#wlc h1 {
+    font-size: 3rem;
+}
+
+#wlc p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 6px;
+    padding: 0px 20px;
+}
+
+#wlc .btn {
+    background:  #28a745;
+    border: none;
+    margin-top: 10px;
+}
+
+
+/* Icon Sections */
+
+#icons {
+    flex-direction: row;
+    padding: 20px;
+    
+}
+#icons .icon {
+    padding: 0px 20px;
+}
+
+#icons i {
+    background: #28a745;
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+}
+
+/* Solution Section */
+
+#sol {
+    display: flex;
+}
+
+#sol img {
+    width: 50%;
+}
+
+/* Cases Section */
+#case {
+    padding: 0px 5px;
+    margin-bottom: 10px ;
+}
+
+#case .img-row {
+    display: flex;
+}
+
+#case .img-column {
+    flex: 1;
+    padding: 0 3px; 
+}
+
+#case img:hover {
+    opacity: 0.6;
+}
+/* Blog section */
+
+#blog {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#blog img {
+    width: 50%;
+}
+
+/* Team Section */
+.team-img {
+    display: flex;
+    
+}
+
+.team-img div {
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.team-img img {
+    border-radius: 50%;
+    
+}
+
+
+/* Contact Section */
+
+#contact {
+    display: flex;
+}
+
+form {
+    background: #ddd7d7;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: center;
+
+    
+}
+
+form input {
+    
+    margin-bottom: 10px;
+    height: 30px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+form p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+form #submit:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+
+footer {
+    min-height: 120px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social i {
+    margin: 10px;
+    color: white;
+    
+}
+
+footer i:hover {
+    color: #28a745;
+    
+}
+
+
+ /* Smartphone sreen quaries */ 
+ 
+ @media screen and (max-width : 738px) {
+     #main-nav {
+        height: 120px;
+        flex-direction: column;
+     }
+
+     .logo {
+        margin: 10px 0;
+     }
+
+     #wlc h1 {
+         line-height: 3rem;
+         font-size: 2.5rem;
+         
+     }
+     .sub-nav a{    
+        padding: 5px 15px;
+     }
+     
+     #icons {
+         flex-direction: column;
+     }
+
+     #icons .icon {
+         margin-bottom: 20px;
+         border-bottom: 1px solid gainsboro ;
+         
+     }
+
+     #icons .icon:last-child{
+        border-bottom: none;
+     }
+    
+     #sol {
+      flex-direction: column; 
+      
+     }
+
+     #sol img {
+         height: 50%;
+         width: 100%;
+     }
+     #sol .big-font {
+         line-height: 2.2rem;
+     }
+
+     #case .img-row {
+        flex-direction: column;
+     }
+
+     #blog {
+         flex-direction: column-reverse;
+     }
+
+     #blog img {
+         width: 100%;
+     }
+
+     #blog .big-font {
+         line-height: 2.2rem;
+     }
+
+     .team-img {
+         flex-direction: column;
+         width: 70%;
+         margin: auto;
+     }
+
+     #contact {
+         flex-direction: column;
+     }
+
+     form {
+         width: 100%;
+     }
+ }
+
+
+/* BLOG POST SYTLING */
+
+#main-header.blog {
+    height: 40vh;
+    background: url(/images/home/blog.jpg) no-repeat center center/cover;
+}
+
+#blog.reverse {
+    flex-direction: row ;
+}
+
+
+/* post */
+#post {
+    padding: 20px 50px;
+    width: 100%;
+}
+
+#post img {
+    border-radius: 50%;
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+#post .big-font {
+    padding: 20px 0;
+    border-bottom: #333 solid 1px ;
+}
+ 
