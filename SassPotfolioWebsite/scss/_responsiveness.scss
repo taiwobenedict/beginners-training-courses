@@ -1,0 +1,87 @@
+// Tablets ans smaller Phones
+
+@media (max-width: 800px) {
+   #header-home {
+    height: 70vh;
+   }
+}
+@media (max-width: 500px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-bar li {
+    padding: 0 10px;
+    margin-bottom: 10px;
+
+    a {
+      padding-bottom: 5px;
+    }
+  }
+
+  #header {
+    &-about,
+    &-work {
+      min-height: 20vh;
+    }
+  }
+
+  .bio-txt {
+    padding-top: 10px ;
+    margin-left: 0;
+  }
+
+  .logos {display: none;}
+
+  // Flex Stack
+
+  .awards .flex,
+  .tst-container, 
+  .bio,
+  footer {
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+
+
+//  Grids Stack
+  .speciality .specials-container,
+  .achievement,
+  .creativity-container,
+  .gallery .gal-container{
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+  
+  .form-grid {
+    display: block;
+    .form-bar {
+      width: 97%;
+      margin-bottom: 10px;
+      }
+
+      .submit {
+        padding: 10px 0;
+        width: 100%;
+    }
+  }
+
+  .gallery {
+    margin: 0 12px;
+    
+  }
+  
+
+}
+
+@media (max-width:700px) {
+  footer {
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+
+  .speciality .specials-container,
+  .creativity-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,126 @@
+// Variables Block
+$website-width: 1250px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$header-img : url(../img/showcase.jpg); 
+
+
+
+// Shared Block
+%btn-shared {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ddd;
+    color: #444;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+%bg-light {
+    background-color: $light-color;
+    color: $dark-color;
+}
+
+%bg-dark {
+    background: $dark-color;
+    color: $light-color;
+}
+
+%bg-main {
+    background: $main-color;
+    color: $light-color; 
+}
+
+%bg-medium {
+    background-color: $medium-color;
+    color: $dark-color;
+}
+
+%grids {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    // justify-content: center;
+    // align-items: center;
+}
+
+// Utilities
+.container {
+    max-width: $website-width;
+    padding: 10px 5px;
+    margin: 0 auto;
+    
+}
+
+.lead {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+
+// Buttons
+.btn {
+
+     &-main {
+        @extend %btn-shared;
+        @extend %bg-main;
+    }
+
+    &-light {
+        @extend %btn-shared;
+        @extend %bg-light;
+        & a:hover {
+            color: $light-color;
+        }
+    }
+
+    &-dark {
+        @extend %btn-shared;
+        @extend %bg-dark
+    }
+
+   
+}
+
+.bg {
+    &-light {@extend %bg-light;}      
+    &-dark {@extend %bg-dark;}
+    &-main {@extend %bg-main;}
+    &-medium {@extend %bg-medium }
+}
+
+.underline {
+    height: 3px;
+    width: 70px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: $main-color;
+}
+
+// Hover Effect
+div[class^='btn-']:hover,
+a[class^='btn-']:hover,
+button[class^='btn-']:hover {
+    background: $main-color;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+.mg-y {
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
+
+
+

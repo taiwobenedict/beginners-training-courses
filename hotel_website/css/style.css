@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6em;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+/* UTILITIES */
+.mag-1{margin-bottom: 20px;}
+.mag-2{margin-bottom: 30px;}
+.bg-color{background-color: red;}
+
+/* NAVIGATION BAR */
+
+#navbar {
+    background-color: #333;
+    overflow: auto;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+
+}
+#navbar ul li {
+    float: right;
+    padding: 20px;
+    color: white;
+    list-style: none;
+}
+#navbar ul li a {
+    padding: 20px 0px;
+}
+#navbar h1 a{
+    float: left;
+    padding: 20px;
+    
+}
+#navbar ul li:hover {
+    background-color: #444;
+}
+#navbar ul li a:hover {
+     color: #f7c08f;
+}
+#navbar h1:hover {
+    background-color: #444;
+}
+#navbar h1 a:hover {
+    color: #f7c08f;
+}
+/* SHOWCASE */
+
+#showcase-bg {
+    height: 600px;
+    background: url(../img/showcase.jpg) no-repeat center center/cover;
+}
+#showcase-bg h1 {
+    text-align: center;
+    font-size: 55px;
+    padding-top: 170px;
+    margin-bottom: 40px;
+    color: white;
+    display: block;
+}
+#showcase-bg h1 span {
+    color: #f7c08f;
+}
+#showcase-bg p {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 18px;
+    padding: 5px 40px;
+}
+.about-btn a{
+    color: white;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+.about-btn a:hover {
+    color: #f7c08f;
+    background: #444;
+}
+#container {
+    height: 400px;
+    overflow: hidden;
+
+}
+#container .feature-img {
+    background: url(../img/photo-1.jpg);
+    width: 50%;
+    min-height: 100%;
+    float: left;
+
+}
+.history {
+    width: 50%;
+    float: right;
+    min-height: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+
+}
+.history h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+.history h1 span {
+    color: #f7c08f;
+}
+.history p {
+    text-align: justify ;
+    line-height: 2em;
+}
+.history a {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    color: rgb(54, 53, 53);
+}
+.history a:hover {
+    background-color:  #f7c08f;
+    color: black;
+}
+#footer-container div{
+    text-align: center;
+    min-height: 250px;
+    max-width: 33.33%;
+    padding: 50px;
+    color: #333;
+}
+#footer-container i{
+    margin-bottom: 20px;
+}
+#footer-container h1{
+    margin-bottom: 40px;
+}
+.box-1{
+    background-color: #f4f4f4;
+    float: left;
+}
+.box-2{
+    background-color: #f7c08f;
+    display: inline-block;
+}
+.box-3{
+    background-color: #f4f4f4;
+    float: right;
+}
+.clr{
+    clear: both;
+}
+.footer{
+    text-align: center;
+    background-color: rgb(54, 53, 53);
+    padding: 20px;
+    color: white;
+}
+
+
+/* About Page */
+.about-details{
+    padding: 0px 40px;
+    background-color: #f4f4f4;
+    
+}
+.details-container {
+    float: left;
+    padding: 30px;
+    width: 50%;
+}
+.details-container h1 span{
+    color: #f7c08f;
+}
+
+.image-container {
+    float: right;
+    padding: 30px;
+    width: 50%;
+    min-height: 100%;
+}
+.image-container img {
+    width : 60%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+/* Guest Reviews */
+.guest-reviews {
+    background: url(../img/test-bg.jpg) no-repeat center center/cover;
+    padding: 50px 30px;
+    min-height: 600px ;
+   
+}
+.guest-reviews h1{
+    color: white;
+    margin: 50px;
+    text-align: center;
+}
+.guest {
+    background-color: #f7c08f;
+    padding: 20px;
+    min-height: 100%;
+    margin-bottom: 20px;
+    overflow: auto;
+    border-radius: 5px;
+    color: #444;
+    opacity: 0.89;
+}
+.guest img {
+    border-radius: 50%;
+    width: 100px;
+    display: block;
+    float: left;
+    margin-right:20px ;
+}
+.guest p{
+    margin-top: 10px;
+}
+
+/* CONTACT PAGE */
+.form {
+    padding: 30px 50px;
+}
+.label h1 span{
+    color: #f7c08f;
+}
+.label h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+.label p {
+    margin-bottom: 10px;
+}
+.form input, textarea{
+    width: 100%;
+    border: #d3cece solid 1px;
+    outline: none;
+}
+.form input {
+    height: 35px;
+}
+.form input:hover, textarea:hover{
+    box-shadow:0 2px 8px rgb(179, 176, 176);
+    
+}
+button {
+    border: none;
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #444;
+    color: #f7c08f;
+
+}

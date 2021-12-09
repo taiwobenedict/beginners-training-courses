@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block title %}
+Block Home
+{% endblock title %}
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <h1>Posts</h1>
+    <br>
+
+    <!--Object list is all of the the queryset or blog post in database-->
+    {% for post in object_list %}
+    <li>
+        <b>Post title:</b> {{post.title}}
+        <br>
+        <b>Author:</b> {{post.author|title}}
+        <br>
+        <small>Post: {{post.body|slice:":20"}}...</small>
+        <br>
+        <b>Category:</b> <a href="{% url 'blog:category' post.category|slugify %}">{{post.category|title}}</a> 
+        <br>
+        <a href=" {% url 'blog:article' post.pk %} ">View full post</a><br>
+        <a href=" {% url 'blog:delete_post' post.pk %} ">Delete post</a> <br>
+        <hr>
+
+    </li>
+{% endfor %}
+    {% else %}
+    <h2>Page closed</h2>
+    <hr>
+    <p>Please <a href="{% url 'users:registration' %}">Sign Up</a> or <a href="{% url 'users:login' %}">Login</a></p>
+
+{% endif %}
+
+{% endblock content %}

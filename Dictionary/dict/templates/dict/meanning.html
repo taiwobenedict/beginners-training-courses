@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{word.title}} Meaning 
+{% endblock title %}
+
+
+
+{% block contents %}
+<p>
+<h3>{{word.title}}</h3>means:
+</p>
+<hr>
+<p>
+{{word_meaning}}
+</p>
+    
+{% endblock contents %}
+    
+    

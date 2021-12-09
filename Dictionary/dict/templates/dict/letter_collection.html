@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    
+{% endblock title %}
+    
+
+
+{% block contents %}
+    
+    {% for word in each_letter %}
+       <a href="{% url 'meaning' word %}">
+       <ul>
+        <li>
+        {{word}}
+       </li> 
+       </ul>
+       </a>
+      
+    {% endfor %}
+        
+{% endblock contents %}
+    

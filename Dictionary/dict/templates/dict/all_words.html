@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    All WORDS
+{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'dict/all_words.css' %}">
+{% endblock css_files %}
+
+{% block contents %}
+    
+    {% for words in all_words %}
+        <a href="{% url 'meaning' words %}">
+            <li>
+                {{words.title}}
+            </li>
+        </a>
+    {% endfor %}
+        
+{% endblock contents %}
+    

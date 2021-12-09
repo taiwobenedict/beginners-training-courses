@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Delete Post
+{% endblock title %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <h1>Delete Post</h1>
+    <hr>
+    <p>Are you sure you want to delete?</p>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-danger"> Yes</button>
+        <a href="{% url 'blog:home' %} " class="btn btn-primary"> No</a>
+    </form>
+    {% else %}
+    <h2>Page closed</h2>
+    <hr>
+    <p>Please <a href="{% url 'users:registration' %}">Sign Up</a> or <a href="{% url 'users:login' %}">Login</a></p>
+
+{% endif %}
+    
+
+{% endblock content %}

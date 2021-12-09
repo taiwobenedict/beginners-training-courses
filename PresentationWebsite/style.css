@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: white;
+    overflow: hidden;
+    background-color: #333;
+}
+
+:root {
+    --page-1-color : steelblue;
+    --page-2-color : tan;
+    flex-direction: column;
+    --page-3-color : teal;
+    --page-4-color : slateblue;
+    --animate-speed: 1.5s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0px 50px;
+    text-align: center;
+    
+}
+
+#page-1 {
+    background: var(--page-1-color);
+    
+}
+
+#page-1 h1 {
+    transform: translateY(-1000px);
+    animation: heading-slide var(--animate-speed) forwards ease-in-out;
+}
+
+#page-1 p {
+    transform: translateX(-1800px);
+    animation: paragraph-slide var(--animate-speed) 1s forwards ease-in-out;
+}
+
+#page-1 div > a {
+    transform: translateY(1000px);
+    animation: button-slide var(--animate-speed) 2s forwards ease-out;
+}
+@keyframes heading-slide{
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes paragraph-slide {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes button-slide {
+    20% {transform: translateY(-10px);}
+    40% {transform: translateY(10px);}
+    60% {transform: translateY(-5px);}
+    80% {transform: translateY(5px);}
+    100% {transform: translateY(0);}
+
+}
+
+
+#page-2 {background: var(--page-2-color);}
+#page-3 {background: var(--page-3-color);}
+#page-4 {background: var(--page-4-color);}
+
+.btn {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.btn:hover,.bg-dark {
+    background: #333;
+    color: #f4f4f4;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.bg-dark:hover {
+    background: #f4f4f4;
+    color: #333;
+}
+
+

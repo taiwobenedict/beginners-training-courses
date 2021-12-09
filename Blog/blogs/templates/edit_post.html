@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Edit Post
+{% endblock title %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    
+<h1>Update Post</h1>
+<br>
+<div class="form-group">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% else %}
+<h2>Page closed</h2>
+<hr>
+<p>Please <a href="{% url 'users:registration' %}">Sign Up</a> or <a href="{% url 'users:login' %}">Login</a></p>
+
+{% endif %}
+
+{% endblock content %}

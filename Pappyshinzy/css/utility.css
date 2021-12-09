@@ -1,0 +1,86 @@
+/* Variables */
+
+:root {
+  --primary-color: #5a5af6;
+  --secondary-color: #6bc1ff;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  margin: 1rem 0;
+  border-radius: 50px;
+  background: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Background colors */
+
+.bg-pri {
+  background: var(--primary-color);
+  color: #f4f4f4;
+}
+.bg-sec {
+  background: var(--secondary-color);
+  color: #f4f4f4;
+}
+
+.bg-light {
+  background: #ddd;
+  color: #333;
+}
+
+
+/* Other Utilities */
+
+.container {
+  max-width: 60rem;
+  padding-top: 2rem;
+  margin: 0 auto;
+  padding:0 1rem;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  grid-gap: 1rem;
+  /* flex-wrap: wrap; */
+}
+
+
+.flex-col {
+  flex-direction: column;
+}
+
+.txt-upper {
+  text-transform: uppercase;
+}
+
+.underline {
+  display: inline-block;
+  width: 10rem;
+  height: 5px;
+  margin: 0.5rem auto;
+  background: var(--primary-color);
+  border-radius: 50px;
+}
+
+.title-btn {
+  padding: 5px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+

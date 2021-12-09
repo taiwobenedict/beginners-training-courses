@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Words Index
+{% endblock title %}
+
+
+{% block contents %}
+    
+    {% for letters in index %}
+    <ul>
+    <a href="{% url 'letter-collection' letters.slug_index %}">
+        <li>
+            {{letters.index}}
+        </li>
+    </a>
+        
+    </ul>
+        
+    {% endfor %}
+        
+{% endblock contents %}
+    

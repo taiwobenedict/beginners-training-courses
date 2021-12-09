@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if cate %}
+    <h1>{{ cate|title }} Categories</h1>
+    <br>
+    {% for post in posts_category %}
+    <li>
+        <b>Post title:</b> {{post.title}}
+        <br>
+        <b>Author:</b> {{post.author|title}}
+        <br>
+        <small>Post: {{post.body|slice:":20"}}...</small>
+        <br>
+        <a href=" {% url 'blog:article' post.pk %} ">View full post</a><br>
+        <a href=" {% url 'blog:delete_post' post.pk %} ">Delete post</a> <br>
+        <hr>
+    {% endfor %}
+{% else %}
+<h1>Sorry this page does not exist!!</h1>
+{% endif %}
+    
+   
+   
+        
+{% endblock content %}
+    

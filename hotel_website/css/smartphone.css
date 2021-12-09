@@ -1,0 +1,65 @@
+* {
+    float: none;
+}
+#navbar ul li, 
+#navbar ul li a,
+#navbar h1 a {
+    float: none;
+    text-align: center;
+    width:100%;
+    display: block;
+    padding: 5px;
+}
+
+#navbar h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    padding-top: 20px;
+   
+}
+
+#navbar ul li {
+    border-bottom: solid 1px gray;
+  
+}
+
+#navbar ul li:last-child {
+    border-bottom: none;
+}
+#showcase-bg h1 {
+    width: 100%;
+    line-height: 4rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* History */
+#container {
+    min-height: 500px;
+  
+}
+#container .feature-img {
+    display: none;
+    float: none;
+}
+.history {
+    width: 100%;
+    float: none;
+
+}
+#footer-container div {
+    max-width: 100%;
+    min-height: 200px;
+}
+.box-1, .box-2, .box-3{
+    float: none;
+    display: block;
+}
+
+/* About Page */
+.details-container, .image-container,
+.about-details {
+    float: none;
+    width: 100%;
+    padding: 20px;
+}
